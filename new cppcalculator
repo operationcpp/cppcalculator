@@ -1,0 +1,98 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	/*
+		Setup and delclaration
+	*/
+	int option;
+	int addend1; // Declaring the two numbers that are being added
+	int addend2;
+	int subend1;
+	int subend2;
+	cout << "Press 1 for addition, and press 2 for subtraction \n";
+	cin >> option;
+	if (option == 1) {
+
+		/*
+
+		Adding part
+
+	   */
+		cout << "Welcome to the addition only calculator \n \n";
+		cout << "Enter a number \n";
+		cin >> addend1;
+		cout << "Enter another number \n";
+		cin >> addend2;
+		int sum = addend1 + addend2;
+		int fourthVar = sum % 2;
+		cout << "The sum of those two numbers are " << sum;
+		if (fourthVar == 0) {
+			cout << "\nThe sum is even" << endl;
+		}
+		else {
+			cout << "\nThe sum is odd" << endl;
+		}
+
+		int i, m = 0, flag = 0;
+		m = sum / 2;
+		for (i = 2; i <= m; i++)
+		{
+			if (sum % i == 0)
+			{
+				cout << "The sum is not Prime." << endl;
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 0)
+			cout << "Number is Prime." << endl;
+
+
+	}
+	else {
+
+
+		/*
+
+		Subtracting part
+
+	   */
+		cout << "Welcome to the subtraction only calculator \n \n";
+		cout << "Enter a number \n";
+		cin >> subend1;
+		cout << "Enter another number \n";
+		cin >> subend2;
+		int difference = subend1 - subend2;
+		int fourthVar = difference % 2;
+		cout << "The difference of those two numbers are " << difference;
+		if (fourthVar == 0) {
+			cout << "\nThe difference is even" << endl;
+		}
+		else {
+			cout << "\nThe difference is odd" << endl;
+		}
+
+		int i, m = 0, flag = 0;
+		m = difference / 2;
+		for (i = 2; i <= m; i++)
+		{
+			if (difference % i == 0)
+			{
+				cout << "The difference is not Prime." << endl;
+				flag = 1;
+				break;
+			}
+		}
+		if (flag == 0)
+			cout << "The difference is Prime." << endl;
+
+
+
+
+	}
+
+	return 0;
+}
+		
